@@ -1,0 +1,33 @@
+set encoding=utf-8
+set fileencodings=utf-8,chinese,latin-1
+if has("win32")
+    set fileencoding=chinese
+else
+    set fileencoding=utf-8
+endif
+
+syntax on
+set nu
+set ai!
+
+" indent: 如果用了:set indent,:set ai 等自动缩进，想用退格键将字段缩进的删掉，必须设置这个选项。否则不响应。
+" eol:如果插入模式下在行开头，想通过退格键合并两行，需要设置eol。
+" start：要想删除此次插入前的输入，需设置这个
+set backspace=indent,eol,start
+
+"插件管理
+set rtp+=$USERPROFILE\.vim\bundle\Vundle.vim
+let path='$USERPROFILE\.vim\bundle'
+call vundle#begin(path)
+"let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+"my bundle plugin
+Plugin 'scrooloose/nerdtree' 
+Plugin 'tpope/vim-commentary'
+call vundle#end()
+"filetype plugin indent on
+
+" Ctrl+S保存,Ctrl+Z撤销,Ctrl+C复制,Ctrl+V粘贴
+source $VIMRUNTIME/mswin.vim
+
+
