@@ -17,6 +17,7 @@ set backspace=indent,eol,start
 
 "插件管理
 set rtp+=$USERPROFILE\.vim\bundle\Vundle.vim
+
 let path='$USERPROFILE\.vim\bundle'
 call vundle#begin(path)
 "let Vundle manage Vundle, required
@@ -24,6 +25,10 @@ Plugin 'VundleVim/Vundle.vim'
 "my bundle plugin
 Plugin 'scrooloose/nerdtree' 
 Plugin 'tpope/vim-commentary'
+
+"auto-completion
+Plugin 'ycm-core/YouCompleteMe'
+
 call vundle#end()
 "filetype plugin indent on
 
